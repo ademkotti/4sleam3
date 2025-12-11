@@ -12,11 +12,11 @@ import java.util.List;
 public class DepartmentService implements IDepartmentService {
     @Autowired
     DepartmentRepository departmentRepository;
-  @Override
+
+    @Override
     public List<Department> getAllDepartments() {
         return departmentRepository.findAll();
     }
-
 
     @Override
     public Department getDepartmentById(Long idDepartment) {
@@ -33,5 +33,3 @@ public class DepartmentService implements IDepartmentService {
 departmentRepository.deleteById(idDepartment);
     }
 }
-
-
